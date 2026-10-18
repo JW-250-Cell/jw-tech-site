@@ -1,144 +1,440 @@
 <!doctype html>
-<html lang="fr-HT"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="JW Tech, boutique indépendante à Arcahaie, Haïti. Contactez-nous pour connaître la disponibilité des produits technologiques et les conditions de livraison partout en Haïti.">
-<title>JW Tech | Technologie, partout dans le monde</title><link rel="stylesheet" href="styles.css"></head>
-<body><header><div class="nav"><a class="brand" href="#">JW <b>TECH</b></a><nav><a href="#produits">Produits</a><a href="#apropos">À propos</a><a href="#contact">Contact</a></nav></div></header>
-<main><section class="hero"><div class="hero-copy"><p class="eyebrow">Notre Emplacement : 14 Rue Saint Joseph ARCAHAIE · HAÏTI</p><h1>La technologie.<br><span>En toute simplicité.</span></h1><p>JW Tech prépare une sélection d’appareils et d’accessoires technologiques pour les clients en Haïti. Contactez-nous pour confirmer les disponibilités, les prix et les modalités de livraison.</p><a class="btn" href="#produits">Explorer les catégories ↓</a><p class="note">Disponibilité et prix à confirmer avant toute commande.</p></div><div class="hero-art"><div class="laptop"></div><div class="phone"></div><div class="chip">TECH · SERVICE · CONFIANCE</div></div></section>
-<section class="trust"><span>✓ Informations claires</span><span>✓ Contact direct</span><span>✓ Livraison à confirmer partout en Haïti rt Canada </span></section>
-
-<section id="produits" class="section">
-  <p class="eyebrow">NOTRE CATALOGUE</p>
-  <h2>Nos iPhone 12 à 17 Pro Max</h2>
-  <p class="intro">
-    iPhone neufs et d’occasion. Choisissez un modèle,
-    une capacité et un état, puis contactez-nous pour le prix.
-  </p>
-
-  <div class="grid" id="catalogue-iphone"></div>
-
-  <p class="disclaimer">
-    JW Tech est une boutique indépendante basée à Arcahaie,
-    Haïti. Nous ne sommes pas affiliés à Apple Inc.
-    Les prix, stocks, capacités et livraisons doivent être
-    confirmés avant toute commande.
-  </p>
-</section>
-
+<html lang="fr">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="JW TECH, boutique indépendante à Arcahaie, Haïti. iPhone neufs et d’occasion. Contactez-nous pour les prix, stocks et modalités de livraison.">
+<title>JW TECH | iPhone et technologie</title>
 <style>
-#catalogue-iphone {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-}
-.iphone-card {
-  padding: 16px;
-  border: 1px solid #ddd;
-  border-radius: 14px;
-  background: white;
-}
-.iphone-card img {
-  width: 100%;
-  height: 190px;
-  object-fit: contain;
-  background: #f4f6fa;
-  border-radius: 10px;
-}
-.iphone-card label {
-  display: block;
-  margin-top: 12px;
-}
-.iphone-card select {
-  width: 100%;
-  padding: 10px;
-  margin-top: 5px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-}
-.iphone-card .order-btn {
-  display: block;
-  margin-top: 14px;
-  padding: 12px;
-  background: #09234d;
-  color: white;
-  text-align: center;
-  text-decoration: none;
-  border-radius: 8px;
-}
+:root{--navy:#09234d;--blue:#155eef;--ink:#172033;--muted:#647084;--pale:#f4f7fb;--line:#e2e8f0}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);line-height:1.55;background:#fff}
+a{color:inherit}.nav{max-width:1160px;margin:auto;padding:16px 22px;display:flex;align-items:center;justify-content:space-between;gap:18px}.brand{font-size:24px;font-weight:800;text-decoration:none;color:var(--navy)}.brand b{color:var(--blue)}nav{display:flex;gap:18px;flex-wrap:wrap}nav a{text-decoration:none;font-weight:700;font-size:14px}
+.hero{background:linear-gradient(135deg,#f3f7ff,#fff);padding:60px 22px}.hero-inner{max-width:1160px;margin:auto}.eyebrow,.tag{font-size:11px;letter-spacing:1.5px;font-weight:800;color:var(--blue);text-transform:uppercase}.hero h1{font-size:clamp(36px,6vw,62px);line-height:1.08;margin:12px 0}.hero h1 span{color:var(--blue)}.hero p{max-width:680px;color:var(--muted)}.btn{display:inline-block;margin-top:12px;padding:12px 18px;border-radius:9px;text-decoration:none;font-weight:800;background:var(--navy);color:white}
+.trust{display:flex;justify-content:center;gap:26px;flex-wrap:wrap;padding:18px;border-bottom:1px solid var(--line);font-size:14px}
+.section,.about,.contact{max-width:1160px;margin:auto;padding:48px 22px}.section h2,.about h2,.contact h2{font-size:clamp(26px,4vw,38px);line-height:1.2;margin:8px 0}.intro{color:var(--muted);max-width:680px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;margin-top:26px}.card{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:white;box-shadow:0 5px 18px #1020400b}.card img{width:100%;height:205px;object-fit:contain;background:var(--pale);padding:12px}.card-body{padding:16px}.tag{margin:0}.card h3{margin:5px 0;font-size:19px}.price{margin:6px 0 12px;color:var(--navy)}.price strong{font-size:19px}label{display:block;font-size:13px;font-weight:700;margin-top:10px}select{display:block;width:100%;margin-top:5px;padding:10px;border:1px solid #cbd5e1;border-radius:8px;background:#fff;font-size:14px}.order-btn{display:block;text-align:center;text-decoration:none;background:#16834a;color:white;padding:11px;border-radius:8px;font-weight:800;margin-top:15px;font-size:14px}.disclaimer{font-size:12px;color:var(--muted);margin-top:24px}
+.about{display:grid;grid-template-columns:1fr 1.2fr;gap:28px;background:var(--pale);max-width:none;padding-left:max(22px,calc((100% - 1116px)/2));padding-right:max(22px,calc((100% - 1116px)/2))}.about p{color:var(--muted)}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center}.contact p{color:var(--muted)}.contact-buttons{display:flex;flex-direction:column;align-items:flex-start;gap:12px}.email{color:var(--navy);font-weight:700}.whats{background:#16834a}.small{font-size:13px;color:var(--muted)}
+footer{padding:25px 22px;background:#071a39;color:white;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:13px}footer strong{font-size:18px}
+@media(max-width:650px){.nav{align-items:flex-start;flex-direction:column}nav{gap:12px}.hero{padding:42px 22px}.about,.contact{grid-template-columns:1fr}.trust{justify-content:flex-start;gap:10px;flex-direction:column}}
 </style>
+</head>
+<body>
+<header><div class="nav"><a class="brand" href="#">JW <b>TECH</b></a><nav><a href="#produits">Produits</a><a href="#apropos">À propos</a><a href="#contact">Contact</a></nav></div></header>
+<main>
+<section class="hero"><div class="hero-inner"><p class="eyebrow">14 Rue Saint Joseph · Arcahaie, Haïti</p><h1>La technologie.<br><span>En toute simplicité.</span></h1><p>Découvrez notre sélection d’iPhone neufs et d’occasion. Écrivez-nous pour confirmer le prix, l’état, le stock et les possibilités de livraison en Haïti ou au Canada.</p><a class="btn" href="#produits">Voir les iPhone ↓</a><p class="small">Prix et disponibilité à confirmer avant toute commande.</p></div></section>
+<div class="trust"><span>✓ Contact direct</span><span>✓ Neuf et occasion</span><span>✓ Livraison à confirmer en Haïti et au Canada</span></div>
+<section id="produits" class="section"><p class="eyebrow">NOTRE CATALOGUE</p><h2>Nos iPhone 12 à 17 Pro Max</h2><p class="intro">Choisissez le modèle, l’état et la capacité, puis contactez JW TECH sur WhatsApp. Les prix qui ne sont pas encore confirmés sont indiqués « Prix sur demande ».</p><div class="grid" id="catalogue-iphone">
 
-<script>
-const modeles = [
-  "iPhone 12", "iPhone 12 Pro", "iPhone 12 Pro Max",
-  "iPhone 13", "iPhone 13 Pro", "iPhone 13 Pro Max",
-  "iPhone 14", "iPhone 14 Plus", "iPhone 14 Pro",
-  "iPhone 14 Pro Max",
-  "iPhone 15", "iPhone 15 Plus", "iPhone 15 Pro",
-  "iPhone 15 Pro Max",
-  "iPhone 16", "iPhone 16 Plus", "iPhone 16 Pro",
-  "iPhone 16 Pro Max",
-  "iPhone 17", "iPhone 17 Pro", "iPhone 17 Pro Max",
-  "iPhone Air"
-];
+      <article class="card">
+        <img src="images/iPhone_12/iPhone_12.jpeg" alt="iPhone 12" loading="lazy" onerror="this.style.display='none'">
+        <div class="card-body">
+          <p class="tag">JW TECH · IPHONE</p>
+          <h3>iPhone 12</h3>
+          <p class="price">À partir de <strong>$300 US</strong></p>
+          <label>État
+            <select class="etat"><option>Neuf</option><option>Occasion</option></select>
+          </label>
+          <label>Capacité
+            <select class="capacite"><option>64 Go</option><option selected>128 Go</option><option>256 Go</option><option>512 Go</option><option>1 To</option></select>
+          </label>
+          <a class="order-btn" target="_blank" rel="noopener noreferrer"
+             href="https://wa.me/18192138773?text=Bonjour JW Tech, je souhaite connaître le prix et la disponibilité du iPhone 12.">Demander / commander sur WhatsApp</a>
+        </div>
+      </article>
 
-const numeroWhatsApp = "18192138773";
-const catalogue = document.getElementById("catalogue-iphone");
+      <article class="card">
+        <img src="images/iPhone_12_mini/iPhone_12_mini.jpeg" alt="iPhone 12 mini" loading="lazy" onerror="this.style.display='none'">
+        <div class="card-body">
+          <p class="tag">JW TECH · IPHONE</p>
+          <h3>iPhone 12 mini</h3>
+          <p class="price">Prix sur demande</p>
+          <label>État
+            <select class="etat"><option>Neuf</option><option>Occasion</option></select>
+          </label>
+          <label>Capacité
+            <select class="capacite"><option>64 Go</option><option selected>128 Go</option><option>256 Go</option><option>512 Go</option><option>1 To</option></select>
+          </label>
+          <a class="order-btn" target="_blank" rel="noopener noreferrer"
+             href="https://wa.me/18192138773?text=Bonjour JW Tech, je souhaite connaître le prix et la disponibilité du iPhone 12 mini.">Demander / commander sur WhatsApp</a>
+        </div>
+      </article>
 
-modeles.forEach((modele, index) => {
-  const carte = document.createElement("article");
-  carte.className = "iphone-card";
+      <article class="card">
+        <img src="images/iPhone_12_Pro/iPhone_12_Pro.jpeg" alt="iPhone 12 Pro" loading="lazy" onerror="this.style.display='none'">
+        <div class="card-body">
+          <p class="tag">JW TECH · IPHONE</p>
+          <h3>iPhone 12 Pro</h3>
+          <p class="price">À partir de <strong>$369 US</strong></p>
+          <label>État
+            <select class="etat"><option>Neuf</option><option>Occasion</option></select>
+          </label>
+          <label>Capacité
+            <select class="capacite"><option>64 Go</option><option selected>128 Go</option><option>256 Go</option><option>512 Go</option><option>1 To</option></select>
+          </label>
+          <a class="order-btn" target="_blank" rel="noopener noreferrer"
+             href="https://wa.me/18192138773?text=Bonjour JW Tech, je souhaite connaître le prix et la disponibilité du iPhone 12 Pro.">Demander / commander sur WhatsApp</a>
+        </div>
+      </article>
 
-  carte.innerHTML = `
-    <img
-      src="https://placehold.co/400x300/f4f6fa/09234d?text=${encodeURIComponent(modele)}"
-      alt="${modele}"
-      loading="lazy"
-    >
-    <h3>${modele}</h3>
+      <article class="card">
+        <img src="images/iPhone_12_Pro_Max/iPhone_12_Pro_Max.jpeg" alt="iPhone 12 Pro Max" loading="lazy" onerror="this.style.display='none'">
+        <div class="card-body">
+          <p class="tag">JW TECH · IPHONE</p>
+          <h3>iPhone 12 Pro Max</h3>
+          <p class="price">À partir de <strong>$369 US</strong></p>
+          <label>État
+            <select class="etat"><option>Neuf</option><option>Occasion</option></select>
+          </label>
+          <label>Capacité
+            <select class="capacite"><option>64 Go</option><option selected>128 Go</option><option>256 Go</option><option>512 Go</option><option>1 To</option></select>
+          </label>
+          <a class="order-btn" target="_blank" rel="noopener noreferrer"
+             href="https://wa.me/18192138773?text=Bonjour JW Tech, je souhaite connaître le prix et la disponibilité du iPhone 12 Pro Max.">Demander / commander sur WhatsApp</a>
+        </div>
+      </article>
 
-    <label>État</label>
-    <select class="etat">
-      <option>Neuf</option>
-      <option>Occasion</option>
-    </select>
+      <article class="card">
+        <img src="images/iPhone_13/iPhone_13.jpg" alt="iPhone 13" loading="lazy" onerror="this.style.display='none'">
+        <div class="card-body">
+          <p class="tag">JW TECH · IPHONE</p>
+          <h3>iPhone 13</h3>
+          <p class="price">À partir de <strong>$380 US</strong></p>
+          <label>État
+            <select class="etat"><option>Neuf</option><option>Occasion</option></select>
+          </label>
+          <label>Capacité
+            <select class="capacite"><option>64 Go</option><option selected>128 Go</option><option>256 Go</option><option>512 Go</option><option>1 To</option></select>
+          </label>
+          <a class="order-btn" target="_blank" rel="noopener noreferrer"
+             href="https://wa.me/18192138773?text=Bonjour JW Tech, je souhaite connaître le prix et la disponibilité du iPhone 13.">Demander / commander sur WhatsApp</a>
+        </div>
+      </article>
 
-    <label>Capacité</label>
-    <select class="capacite">
-      <option>64 Go</option>
-      <option>128 Go</option>
-      <option>256 Go</option>
-      <option>512 Go</option>
-      <option>1 To</option>
-    </select>
+      <article class="card">
+        <img src="images/iPhone_13_mini/iPhone_13_mini.jpg" alt="iPhone 13 mini" loading="lazy" onerror="this.style.display='none'">
+        <div class="card-body">
+          <p class="tag">JW TECH · IPHONE</p>
+          <h3>iPhone 13 mini</h3>
+          <p class="price">Prix sur demande</p>
+          <label>État
+            <select class="etat"><option>Neuf</option><option>Occasion</option></select>
+          </label>
+          <label>Capacité
+            <select class="capacite"><option>64 Go</option><option selected>128 Go</option><option>256 Go</option><option>512 Go</option><option>1 To</option></select>
+          </label>
+          <a class="order-btn" target="_blank" rel="noopener noreferrer"
+             href="https://wa.me/18192138773?text=Bonjour JW Tech, je souhaite connaître le prix et la disponibilité du iPhone 13 mini.">Demander / commander sur WhatsApp</a>
+        </div>
+      </article>
 
-    <a class="order-btn" target="_blank"
-       rel="noopener noreferrer">
-      Demander le prix sur WhatsApp
-    </a>
-  `;
+      <article class="card">
+        <img src="images/iPhone_13_Pro/iPhone_13_Pro.jpg" alt="iPhone 13 Pro" loading="lazy" onerror="this.style.display='none'">
+        <div class="card-body">
+          <p class="tag">JW TECH · IPHONE</p>
+          <h3>iPhone 13 Pro</h3>
+          <p class="price">Prix sur demande</p>
+          <label>État
+            <select class="etat"><option>Neuf</option><option>Occasion</option></select>
+          </label>
+          <label>Capacité
+            <select class="capacite"><option>64 Go</option><option selected>128 Go</option><option>256 Go</option><option>512 Go</option><option>1 To</option></select>
+          </label>
+          <a class="order-btn" target="_blank" rel="noopener noreferrer"
+             href="https://wa.me/18192138773?text=Bonjour JW Tech, je souhaite connaître le prix et la disponibilité du iPhone 13 Pro.">Demander / commander sur WhatsApp</a>
+        </div>
+      </article>
 
-  const etat = carte.querySelector(".etat");
-  const capacite = carte.querySelector(".capacite");
-  const bouton = carte.querySelector(".order-btn");
+      <article class="card">
+        <img src="images/iPhone_13_Pro_Max/iPhone_13_Pro_Max.jpg" alt="iPhone 13 Pro Max" loading="lazy" onerror="this.style.display='none'">
+        <div class="card-body">
+          <p class="tag">JW TECH · IPHONE</p>
+          <h3>iPhone 13 Pro Max</h3>
+          <p class="price">À partir de <strong>$437 US</strong></p>
+          <label>État
+            <select class="etat"><option>Neuf</option><option>Occasion</option></select>
+          </label>
+          <label>Capacité
+            <select class="capacite"><option>64 Go</option><option selected>128 Go</option><option>256 Go</option><option>512 Go</option><option>1 To</option></select>
+          </label>
+          <a class="order-btn" target="_blank" rel="noopener noreferrer"
+             href="https://wa.me/18192138773?text=Bonjour JW Tech, je souhaite connaître le prix et la disponibilité du iPhone 13 Pro Max.">Demander / commander sur WhatsApp</a>
+        </div>
+      </article>
 
-  function actualiserLien() {
-    const message = `Bonjour JW Tech, je souhaite connaître
-le prix et la disponibilité du ${modele},
-état : ${etat.value}, capacité : ${capacite.value}.
-Livraison : Haïti ou Canada.`;
+      <article class="card">
+        <img src="images/iPhone_14/iPhone_14.jpg" alt="iPhone 14" loading="lazy" onerror="this.style.display='none'">
+        <div class="card-body">
+          <p class="tag">JW TECH · IPHONE</p>
+          <h3>iPhone 14</h3>
+          <p class="price">À partir de <strong>$420 US</strong></p>
+          <label>État
+            <select class="etat"><option>Neuf</option><option>Occasion</option></select>
+          </label>
+          <label>Capacité
+            <select class="capacite"><option>64 Go</option><option selected>128 Go</option><option>256 Go</option><option>512 Go</option><option>1 To</option></select>
+          </label>
+          <a class="order-btn" target="_blank" rel="noopener noreferrer"
+             href="https://wa.me/18192138773?text=Bonjour JW Tech, je souhaite connaître le prix et la disponibilité du iPhone 14.">Demander / commander sur WhatsApp</a>
+        </div>
+      </article>
 
-    bouton.href =
-      "https://wa.me/" + numeroWhatsApp +
-      "?text=" + encodeURIComponent(message);
-  }
+      <article class="card">
+        <img src="images/iPhone_14_Plus/iPhone_14_Plus.jpg" alt="iPhone 14 Plus" loading="lazy" onerror="this.style.display='none'">
+        <div class="card-body">
+          <p class="tag">JW TECH · IPHONE</p>
+          <h3>iPhone 14 Plus</h3>
+          <p class="price">Prix sur demande</p>
+          <label>État
+            <select class="etat"><option>Neuf</option><option>Occasion</option></select>
+          </label>
+          <label>Capacité
+            <select class="capacite"><option>64 Go</option><option selected>128 Go</option><option>256 Go</option><option>512 Go</option><option>1 To</option></select>
+          </label>
+          <a class="order-btn" target="_blank" rel="noopener noreferrer"
+             href="https://wa.me/18192138773?text=Bonjour JW Tech, je souhaite connaître le prix et la disponibilité du iPhone 14 Plus.">Demander / commander sur WhatsApp</a>
+        </div>
+      </article>
 
-  etat.addEventListener("change", actualiserLien);
-  capacite.addEventListener("change", actualiserLien);
-  actualiserLien();
+      <article class="card">
+        <img src="images/iPhone_14_Pro/iPhone_14_Pro.jpg" alt="iPhone 14 Pro" loading="lazy" onerror="this.style.display='none'">
+        <div class="card-body">
+          <p class="tag">JW TECH · IPHONE</p>
+          <h3>iPhone 14 Pro</h3>
+          <p class="price">À partir de <strong>$490 US</strong></p>
+          <label>État
+            <select class="etat"><option>Neuf</option><option>Occasion</option></select>
+          </label>
+          <label>Capacité
+            <select class="capacite"><option>64 Go</option><option selected>128 Go</option><option>256 Go</option><option>512 Go</option><option>1 To</option></select>
+          </label>
+          <a class="order-btn" target="_blank" rel="noopener noreferrer"
+             href="https://wa.me/18192138773?text=Bonjour JW Tech, je souhaite connaître le prix et la disponibilité du iPhone 14 Pro.">Demander / commander sur WhatsApp</a>
+        </div>
+      </article>
 
-  catalogue.appendChild(carte);
-});
-</script>
-</p></section>
-<section id="apropos" class="about"><div><p class="eyebrow">À PROPOS</p><h2>Un service simple.<br>Des informations transparentes.</h2></div><p>Nous préparons une boutique en ligne indépendante basée à Arcahaie, en Haïti. Avant toute commande, nous confirmerons le modèle, le prix, la disponibilité, les modalités de paiement, la livraison et la garantie applicable.</p></section>
-<section id="contact" class="contact"><div><p class="eyebrow">CONTACT</p><h2>Vous cherchez un appareil précis?</h2><p>Écrivez-nous pour demander des informations. Nous confirmerons la disponibilité et les modalités de livraison partout en Haïti.</p></div><div class="contact-buttons"><a class="btn light" href="mailto:Wiljecharle515@gmail.com?subject=Demande%20d%E2%80%99information%20JW%20Tech">Nous écrire par courriel ↗</a><a class="btn whats" href="#contact">WhatsApp — à configurer</a><small>Wiljecharle515@gmail.com</small></div></section></main>
-<footer><strong>JW TECH</strong><span>Boutique indépendante · Arcahaie, Haïti</span><small>© <span id="year"></span> JW Tech</small></footer><script>document.getElementById('year').textContent=new Date().getFullYear()</script></body></html>
+      <article class="card">
+        <img src="images/iPhone_14_Pro_Max/iPhone_14_Pro_Max.jpg" alt="iPhone 14 Pro Max" loading="lazy" onerror="this.style.display='none'">
+        <div class="card-body">
+          <p class="tag">JW TECH · IPHONE</p>
+          <h3>iPhone 14 Pro Max</h3>
+          <p class="price">Prix sur demande</p>
+          <label>État
+            <select class="etat"><option>Neuf</option><option>Occasion</option></select>
+          </label>
+          <label>Capacité
+            <select class="capacite"><option>64 Go</option><option selected>128 Go</option><option>256 Go</option><option>512 Go</option><option>1 To</option></select>
+          </label>
+          <a class="order-btn" target="_blank" rel="noopener noreferrer"
+             href="https://wa.me/18192138773?text=Bonjour JW Tech, je souhaite connaître le prix et la disponibilité du iPhone 14 Pro Max.">Demander / commander sur WhatsApp</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="images/iPhone_15/iPhone_15.jpg" alt="iPhone 15" loading="lazy" onerror="this.style.display='none'">
+        <div class="card-body">
+          <p class="tag">JW TECH · IPHONE</p>
+          <h3>iPhone 15</h3>
+          <p class="price">À partir de <strong>$554 US</strong></p>
+          <label>État
+            <select class="etat"><option>Neuf</option><option>Occasion</option></select>
+          </label>
+          <label>Capacité
+            <select class="capacite"><option>64 Go</option><option selected>128 Go</option><option>256 Go</option><option>512 Go</option><option>1 To</option></select>
+          </label>
+          <a class="order-btn" target="_blank" rel="noopener noreferrer"
+             href="https://wa.me/18192138773?text=Bonjour JW Tech, je souhaite connaître le prix et la disponibilité du iPhone 15.">Demander / commander sur WhatsApp</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="images/iPhone_15_Plus/iPhone_15_Plus.jpg" alt="iPhone 15 Plus" loading="lazy" onerror="this.style.display='none'">
+        <div class="card-body">
+          <p class="tag">JW TECH · IPHONE</p>
+          <h3>iPhone 15 Plus</h3>
+          <p class="price">Prix sur demande</p>
+          <label>État
+            <select class="etat"><option>Neuf</option><option>Occasion</option></select>
+          </label>
+          <label>Capacité
+            <select class="capacite"><option>64 Go</option><option selected>128 Go</option><option>256 Go</option><option>512 Go</option><option>1 To</option></select>
+          </label>
+          <a class="order-btn" target="_blank" rel="noopener noreferrer"
+             href="https://wa.me/18192138773?text=Bonjour JW Tech, je souhaite connaître le prix et la disponibilité du iPhone 15 Plus.">Demander / commander sur WhatsApp</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="images/iPhone_15_Pro/iPhone_15_Pro.jpg" alt="iPhone 15 Pro" loading="lazy" onerror="this.style.display='none'">
+        <div class="card-body">
+          <p class="tag">JW TECH · IPHONE</p>
+          <h3>iPhone 15 Pro</h3>
+          <p class="price">À partir de <strong>$600 US</strong></p>
+          <label>État
+            <select class="etat"><option>Neuf</option><option>Occasion</option></select>
+          </label>
+          <label>Capacité
+            <select class="capacite"><option>64 Go</option><option selected>128 Go</option><option>256 Go</option><option>512 Go</option><option>1 To</option></select>
+          </label>
+          <a class="order-btn" target="_blank" rel="noopener noreferrer"
+             href="https://wa.me/18192138773?text=Bonjour JW Tech, je souhaite connaître le prix et la disponibilité du iPhone 15 Pro.">Demander / commander sur WhatsApp</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="images/iPhone_15_Pro_Max/iPhone_15_Pro_Max.jpg" alt="iPhone 15 Pro Max" loading="lazy" onerror="this.style.display='none'">
+        <div class="card-body">
+          <p class="tag">JW TECH · IPHONE</p>
+          <h3>iPhone 15 Pro Max</h3>
+          <p class="price">À partir de <strong>$650 US</strong></p>
+          <label>État
+            <select class="etat"><option>Neuf</option><option>Occasion</option></select>
+          </label>
+          <label>Capacité
+            <select class="capacite"><option>64 Go</option><option selected>128 Go</option><option>256 Go</option><option>512 Go</option><option>1 To</option></select>
+          </label>
+          <a class="order-btn" target="_blank" rel="noopener noreferrer"
+             href="https://wa.me/18192138773?text=Bonjour JW Tech, je souhaite connaître le prix et la disponibilité du iPhone 15 Pro Max.">Demander / commander sur WhatsApp</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="images/iPhone_16/iPhone_16.jpg" alt="iPhone 16" loading="lazy" onerror="this.style.display='none'">
+        <div class="card-body">
+          <p class="tag">JW TECH · IPHONE</p>
+          <h3>iPhone 16</h3>
+          <p class="price">À partir de <strong>$690 US</strong></p>
+          <label>État
+            <select class="etat"><option>Neuf</option><option>Occasion</option></select>
+          </label>
+          <label>Capacité
+            <select class="capacite"><option>64 Go</option><option selected>128 Go</option><option>256 Go</option><option>512 Go</option><option>1 To</option></select>
+          </label>
+          <a class="order-btn" target="_blank" rel="noopener noreferrer"
+             href="https://wa.me/18192138773?text=Bonjour JW Tech, je souhaite connaître le prix et la disponibilité du iPhone 16.">Demander / commander sur WhatsApp</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="images/iPhone_16_Plus/iPhone_16_Plus.jpg" alt="iPhone 16 Plus" loading="lazy" onerror="this.style.display='none'">
+        <div class="card-body">
+          <p class="tag">JW TECH · IPHONE</p>
+          <h3>iPhone 16 Plus</h3>
+          <p class="price">Prix sur demande</p>
+          <label>État
+            <select class="etat"><option>Neuf</option><option>Occasion</option></select>
+          </label>
+          <label>Capacité
+            <select class="capacite"><option>64 Go</option><option selected>128 Go</option><option>256 Go</option><option>512 Go</option><option>1 To</option></select>
+          </label>
+          <a class="order-btn" target="_blank" rel="noopener noreferrer"
+             href="https://wa.me/18192138773?text=Bonjour JW Tech, je souhaite connaître le prix et la disponibilité du iPhone 16 Plus.">Demander / commander sur WhatsApp</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="images/iPhone_16_Pro/iPhone_16_Pro.jpg" alt="iPhone 16 Pro" loading="lazy" onerror="this.style.display='none'">
+        <div class="card-body">
+          <p class="tag">JW TECH · IPHONE</p>
+          <h3>iPhone 16 Pro</h3>
+          <p class="price">À partir de <strong>$780 US</strong></p>
+          <label>État
+            <select class="etat"><option>Neuf</option><option>Occasion</option></select>
+          </label>
+          <label>Capacité
+            <select class="capacite"><option>64 Go</option><option selected>128 Go</option><option>256 Go</option><option>512 Go</option><option>1 To</option></select>
+          </label>
+          <a class="order-btn" target="_blank" rel="noopener noreferrer"
+             href="https://wa.me/18192138773?text=Bonjour JW Tech, je souhaite connaître le prix et la disponibilité du iPhone 16 Pro.">Demander / commander sur WhatsApp</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="images/iPhone_16_Pro_Max/iPhone_16_Pro_Max.jpg" alt="iPhone 16 Pro Max" loading="lazy" onerror="this.style.display='none'">
+        <div class="card-body">
+          <p class="tag">JW TECH · IPHONE</p>
+          <h3>iPhone 16 Pro Max</h3>
+          <p class="price">Prix sur demande</p>
+          <label>État
+            <select class="etat"><option>Neuf</option><option>Occasion</option></select>
+          </label>
+          <label>Capacité
+            <select class="capacite"><option>64 Go</option><option selected>128 Go</option><option>256 Go</option><option>512 Go</option><option>1 To</option></select>
+          </label>
+          <a class="order-btn" target="_blank" rel="noopener noreferrer"
+             href="https://wa.me/18192138773?text=Bonjour JW Tech, je souhaite connaître le prix et la disponibilité du iPhone 16 Pro Max.">Demander / commander sur WhatsApp</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="images/iPhone_17/iPhone_17.jpg" alt="iPhone 17" loading="lazy" onerror="this.style.display='none'">
+        <div class="card-body">
+          <p class="tag">JW TECH · IPHONE</p>
+          <h3>iPhone 17</h3>
+          <p class="price">Prix sur demande</p>
+          <label>État
+            <select class="etat"><option>Neuf</option><option>Occasion</option></select>
+          </label>
+          <label>Capacité
+            <select class="capacite"><option>64 Go</option><option selected>128 Go</option><option>256 Go</option><option>512 Go</option><option>1 To</option></select>
+          </label>
+          <a class="order-btn" target="_blank" rel="noopener noreferrer"
+             href="https://wa.me/18192138773?text=Bonjour JW Tech, je souhaite connaître le prix et la disponibilité du iPhone 17.">Demander / commander sur WhatsApp</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="images/iPhone_17_Plus/iPhone_17_Plus.jpg" alt="iPhone 17 Plus" loading="lazy" onerror="this.style.display='none'">
+        <div class="card-body">
+          <p class="tag">JW TECH · IPHONE</p>
+          <h3>iPhone 17 Plus</h3>
+          <p class="price">Prix sur demande</p>
+          <label>État
+            <select class="etat"><option>Neuf</option><option>Occasion</option></select>
+          </label>
+          <label>Capacité
+            <select class="capacite"><option>64 Go</option><option selected>128 Go</option><option>256 Go</option><option>512 Go</option><option>1 To</option></select>
+          </label>
+          <a class="order-btn" target="_blank" rel="noopener noreferrer"
+             href="https://wa.me/18192138773?text=Bonjour JW Tech, je souhaite connaître le prix et la disponibilité du iPhone 17 Plus.">Demander / commander sur WhatsApp</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="images/iPhone_17_Pro/iPhone_17_Pro.jpg" alt="iPhone 17 Pro" loading="lazy" onerror="this.style.display='none'">
+        <div class="card-body">
+          <p class="tag">JW TECH · IPHONE</p>
+          <h3>iPhone 17 Pro</h3>
+          <p class="price">Prix sur demande</p>
+          <label>État
+            <select class="etat"><option>Neuf</option><option>Occasion</option></select>
+          </label>
+          <label>Capacité
+            <select class="capacite"><option>64 Go</option><option selected>128 Go</option><option>256 Go</option><option>512 Go</option><option>1 To</option></select>
+          </label>
+          <a class="order-btn" target="_blank" rel="noopener noreferrer"
+             href="https://wa.me/18192138773?text=Bonjour JW Tech, je souhaite connaître le prix et la disponibilité du iPhone 17 Pro.">Demander / commander sur WhatsApp</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="images/iPhone_17_Pro_Max/iPhone_17_Pro_Max.jpg" alt="iPhone 17 Pro Max" loading="lazy" onerror="this.style.display='none'">
+        <div class="card-body">
+          <p class="tag">JW TECH · IPHONE</p>
+          <h3>iPhone 17 Pro Max</h3>
+          <p class="price">À partir de <strong>$960 US</strong></p>
+          <label>État
+            <select class="etat"><option>Neuf</option><option>Occasion</option></select>
+          </label>
+          <label>Capacité
+            <select class="capacite"><option>64 Go</option><option selected>128 Go</option><option>256 Go</option><option>512 Go</option><option>1 To</option></select>
+          </label>
+          <a class="order-btn" target="_blank" rel="noopener noreferrer"
+             href="https://wa.me/18192138773?text=Bonjour JW Tech, je souhaite connaître le prix et la disponibilité du iPhone 17 Pro Max.">Demander / commander sur WhatsApp</a>
+        </div>
+      </article>
+</div><p class="disclaimer">JW TECH est une boutique indépendante basée à Arcahaie, Haïti, et n’est pas affiliée à Apple Inc. Les prix, stocks, capacités et modalités de livraison doivent être confirmés avant toute commande.</p></section>
+<section id="apropos" class="about"><div><p class="eyebrow">À PROPOS</p><h2>Un service simple.<br>Des informations transparentes.</h2></div><p>Nous sommes une boutique indépendante basée à Arcahaie, en Haïti. Avant toute commande, nous confirmons le modèle, le prix, la disponibilité, le paiement, la livraison et la garantie applicable.</p></section>
+<section id="contact" class="contact"><div><p class="eyebrow">CONTACT</p><h2>Vous cherchez un appareil précis?</h2><p>Écrivez-nous pour connaître les prix, les disponibilités et les modalités de livraison.</p></div><div class="contact-buttons"><a class="btn" href="mailto:Wiljecharle515@gmail.com?subject=Demande%20d%E2%80%99information%20JW%20TECH">Nous écrire par courriel ↗</a><a class="btn whats" target="_blank" rel="noopener noreferrer" href="https://wa.me/18192138773?text=Bonjour%20JW%20TECH%2C%20je%20souhaite%20des%20informations.">Contacter JW TECH sur WhatsApp ↗</a><span class="email">Wiljecharle515@gmail.com</span><span class="small">WhatsApp : +1 819-213-8773</span></div></section>
+</main><footer><strong>JW TECH</strong><span>Boutique indépendante · Arcahaie, Haïti</span><small>© <span id="year"></span> JW TECH</small></footer>
+<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body></html>
